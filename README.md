@@ -74,6 +74,15 @@ docker compose up --build
 
 This starts MongoDB, Redis, the Node API, and an Nginx-served frontend.
 
+## Deployment
+
+Use [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the recommended free deployment path:
+
+- Frontend on Vercel
+- Backend on Render
+- Database on MongoDB Atlas M0
+- Redis on Upstash Redis
+
 ## Environment
 
 Important variables:
