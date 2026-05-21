@@ -46,6 +46,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 async function start() {
+  console.log(`Starting GLOBALTALK AI API in ${env.nodeEnv} mode on port ${env.port}`);
   await connectDatabase();
   const redisClient = await connectRedis();
   const io = new Server(server, {
@@ -58,6 +59,6 @@ async function start() {
 }
 
 start().catch((err) => {
-  console.error('Startup error:', err);
+  console.error('Startup error:', err.message);
   process.exit(1);
 });
